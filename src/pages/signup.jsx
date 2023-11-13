@@ -19,7 +19,7 @@ const SignUp = () => {
     dispatch(register(inputValues));
   };
   return (
-    <>
+    <div className="container py-3">
       <h2 className="mb-4">SignUp</h2>
       <FormContainer onSubmit={handleSubmit}>
         <div className="mb-3">
@@ -58,14 +58,17 @@ const SignUp = () => {
             required
           />
         </div>
-        <Link to={'/signin'} className="mb-2 text-decoration-none fw-medium">
+        <Link
+          to={'/signin'}
+          className="mb-2 text-decoration-none fw-medium text-center opacity-50"
+        >
           SignIn
         </Link>
         <button className="btn btn-primary" type="submit">
           SignUp
         </button>
       </FormContainer>
-    </>
+    </div>
   );
 };
 

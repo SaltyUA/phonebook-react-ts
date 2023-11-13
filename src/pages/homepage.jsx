@@ -6,8 +6,15 @@ const HomePage = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <div className="container">
-      <p>This app created on React course for GoIT</p>
+    <div className="container py-5">
+      <p className="h2">
+        Welcome to <br />
+        Save My Contacts
+      </p>
+      <p>
+        Here you can save your contacts in case they are deleted for some reason
+        from your device or account
+      </p>
       {isLoggedIn ? (
         <p>
           {' '}

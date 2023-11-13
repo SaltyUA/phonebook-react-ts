@@ -26,14 +26,19 @@ const SharedLayout = () => {
 
   return (
     <>
-      <header className="container d-flex justify-content-around align-items-center mb-2">
-        <Link to="/" className="h1 text-primary">
-          Phonebook
+      <header className="container d-flex justify-content-around align-items-end pb-2 border-bottom">
+        <Link
+          to="/"
+          className="h1 text-primary mb-0 rounded-bottom border border-primary border-top-0 p-2 border-3"
+        >
+          sMc
         </Link>
         {isLogged ? <UserMenu /> : <LoginMenu />}
       </header>
       <Suspense fallback={<Skeleton count={10} />}>
-        <Outlet />
+        <main className=" bg-primary bg-gradient bg-opacity-10">
+          <Outlet />
+        </main>
       </Suspense>
       <ToastContainer />
     </>
